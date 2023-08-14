@@ -12,7 +12,7 @@ router.get("/", ctrl.getAll);
 
 router.get("/:id", ctrl.getById);
 
-router.get("/", ctrl.getAll);
+// router.get("/", ctrl.getAll);
 
 router.post("/", validateBody(schemas.addSchema), ctrl.add);
 
