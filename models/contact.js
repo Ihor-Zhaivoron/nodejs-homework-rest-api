@@ -22,10 +22,7 @@ const addSchema = Joi.object({
   name: Joi.string().required(),
   email: Joi.string().required(),
   phone: Joi.number().required(),
-  favorite: {
-    type: Boolean,
-    default: false,
-  },
+  favorite: Joi.boolean(),
 });
 
 const updateFavoriteSchema = Joi.object({

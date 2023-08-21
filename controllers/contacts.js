@@ -37,7 +37,7 @@ const updateById = async (req, res) => {
   res.json({ code: 200, result: putContact });
 };
 
-const updateFavoriteSchema = async (req, res) => {
+const updateFavorite = async (req, res) => {
   const { id } = req.params;
   const patchContact = await Contact.findByIdAndUpdate(id, req.body, {
     new: true,
@@ -62,6 +62,6 @@ module.exports = {
   getById: ctrlWrapper(getById),
   add: ctrlWrapper(add),
   updateById: ctrlWrapper(updateById),
-  updateFavoriteSchema:ctrlWrapper(updateFavoriteSchema),
+  updateFavorite:ctrlWrapper(updateFavorite),
   deleteById: ctrlWrapper(deleteById),
 };
