@@ -2,8 +2,7 @@ const express = require("express");
 
 const ctrl = require("../../controllers/contacts");
 
-const {validateBody} = require("../../middlewares/validateBody");
-const {isValidId} = require("../../middlewares");
+const {isValidId, validateBody} = require("../../middlewares");
 
 const {schemas} = require("../../models/contact");
 
