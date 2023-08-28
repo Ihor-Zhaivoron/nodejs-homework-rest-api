@@ -43,7 +43,11 @@ const login = async (req, res) => {
     user: { email: user.email, subscription: user.subscription },
   });
 };
+// -----------------------loguot---------------------------------
+const logout = async (req,res,)=>{
+const user = await User.findOne();
 
+}
 module.exports = {
   signup: ctrlWrapper(signup),
   login: ctrlWrapper(login),
