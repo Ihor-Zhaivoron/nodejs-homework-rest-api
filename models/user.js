@@ -5,6 +5,8 @@ const { handleMongooseError } = require("../middlewares");
 
 // const emailRegexp=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+// ------------ Model Schema ----------------//
+
 const userSchema = new Schema(
   {
     password: {
@@ -31,6 +33,8 @@ const userSchema = new Schema(
 );
 
 userSchema.post("save", handleMongooseError);
+
+// ------------- JOI SCHEMA -----------------------//
 
 const authSchema = Joi.object({
   email: Joi.string().required(),

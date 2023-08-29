@@ -7,7 +7,7 @@ const { authSchema } = require("../../models/user");
 const router = express.Router();
 
 router.get("/signup", validateBody(authSchema), ctrl.signup);
-router.post("/login", validateBody(authSchema), ctrl.console.login);
+router.post("/login", validateBody(authSchema), ctrl.login);
 router.post("/loguot", authorization, ctrl.logout);
 router.post("/current", authorization, ctrl.current);
 
